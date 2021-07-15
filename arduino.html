@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>My Web Page</title>
+      	<link rel="stylesheet" href="index.css">
+        <h1 id="head">Arduino</h1>
+    </head>
+    <body>
+        <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutme.html">About me</a></li>
+    <li><a href="tools.html">Tools</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Projects</a>
+      <div class="dropdown-content">
+        <a href="website.html">Website Development</a>
+        <a href="3dmodeling.html">3D Modeling</a>
+        <a href="lasercutting.html">Laser Cutting</a>
+        <a href="3dprinting.html">3D Printing</a>
+        <a href="Arduino.html">Arduino</a>
+      </div>
+    </li>
+    <li><a href="finalproject.html">Final Project</a></li>
+  </ul>
+  <div class="content">
+    <h1><u>Arduino</u></h1>
+    <p>In here i will be talking about how i used Arduino to give life to my projexts from using 
+        switches to turn LEDs on, to programming a clock.</p>
+    <h2>What is Arduino?</h2>
+    <p>Arduino is an open-source electronics platform based on easy-to-use hardware and software. 
+        Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a 
+        Twitter message - and turn it into an output - activating a motor, turning on an LED, 
+        publishing something online. You can tell your board what to do by sending a set of instructions 
+        to the microcontroller on the board. To do so you use the Arduino programming language 
+        (based on Wiring), and the Arduino Software (IDE), based on Processing.
+    </p>
+    <h2><u>Assignments</u></h2>
+    <h3><u>7 segment countdown timer</u></h3>
+    <p>Task : Write a program that counts from 0 to 9 continuosly.<br>
+    Simulation :</p>
+    <figure>
+        <iframe width="725" height="453" src="https://www.tinkercad.com/embed/17VzgIHbZEy?editbtn=1" 
+        frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+    </figure>
+    <p>Explanation :</p>
+    <p>Before I even touched the arduino board, i needed to know the truth table for the numbers I 
+        was going to display, as each segment of the number was assigned to a letter on the 7-segment 
+        display. For example, looking at the number 7, the letters that represented the segments "a, b and c
+        needed to be actuated."
+    </p>
+    <p>
+        <img src="./images/7 segment 2.jpg"width="49%">
+        <img src="./images/seven segment 2.png"width="24%">
+    </p>
+    <p>I then assigned each segment to the numbers on the arduino board, and set the numbers as outputs.</p>
+    <p><img src="./images/7 pin.png"></p>
+</div>
+</body>
+</html>
