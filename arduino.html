@@ -19,6 +19,13 @@
         <a href="arduino.html">Arduino</a>
       </div>
     </li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Assignments</a>
+        <div class="dropdown-content">
+          <a href="chesspiece.html">Knight Chess Piece</a>
+          <a href="musicbox.html">Music Box</a>
+        </div>
+      </li>
     <li><a href="finalproject.html">Final Project</a></li>
   </ul>
   <div class="content">
@@ -57,8 +64,8 @@
         flashing for a second before turning off and flashing the next number.
     </p>
     <p>
-        <img src="./images/numberscode.png"width="49%">
-        <img src="./images/numberscode2.png"width="49%">
+        <img src="./images/numberscode.png"width="39%">
+        <img src="./images/numberscode2.png"width="39%">
     </p>
     <h3><u>1 Switch, Many States</u></h3>
     <p>Task : Write a program that enables a push button to switch between 5 states for a group of 3 LEDs.
@@ -70,7 +77,77 @@
          frameborder="0" marginwidth="0" marginheight="0" scrolling="no">
         </iframe>
     </p>
-    
-</div>
+    <p>
+        Before i even started on writing my programme, i noticed a problem with the push button switch. 
+        When a switch is toggled, contacts have to physically move from one position to another. 
+        As the components of the switch settle into their new position, they mechanically bounce, causing the 
+        underlying circuit to be opened and closed several times, producing multiple inputs.
+    </p>
+    <p>
+        <img src="./images/Switch-Bouncing-in-the-Circuit.png">
+    </p>
+    <p>
+        The function millis() would be used mulitple times in this assignment, hence it is important to know 
+        what it does. millis() returns the number of milliseconds passed since the Arduino board began running 
+        the current program.
+        <br>
+        <br>
+        I first assigned the different LEDs and switch to the different pins on the arduino board.The variables 
+        needed for the programme was also declared. lastDebounceTime, debounceDelay and pressdelay are 
+        unsigned longs because the time, measured in milliseconds, will quickly become a bigger number 
+        that can be stored in an int.
+    </p>
+    <p><img src="./images/states1.png"></p>
+    <p>
+        Next is the debouncing loop, the "int reading = digitalRead(buttonPin)" will read the state of 
+        the switch into a local variable, while the time millis() is taken and stored as the lastDebounceTime.
+        Due to the bouncing of the switch, multiple millis() readings will be taken.   
+    </p>
+    <p><img src="./images/loop.png"></p>
+    <p>
+        The difference between the current time and lastDebounceTime is constantly being calculated and once 
+        the difference exceeds the debounceDelay (set to 50ms), the next part of the code will be executed as 
+        it means the switch has not "bounced" for 50ms.
+        <br>
+        <br>
+        When the button is pressed down, providing a LOW input, it will add 1 to the initially 0 counter. 
+        The number of the counter, determines the different states the 3 LEDs will light up in. Once the 
+        counter is equal to 5, the counter will reset to 0.
+    </p>
+    <p><img src="./images/switch2.png"></p>
+    <p>The different states are:</p>
+    <ul1>
+        <li>0-All Off</li><br>
+        <li>1-Only Red On</li><br>
+        <li>2-Only Green On</li><br>
+        <li>3-Only Yellow On</li><br>
+        <li>4-All On</li><br>
+    </ul1>
+    <p>
+        To turn of all the LEDs after pressing down for 3 seconds, another if function is used to compare the
+        lastDebounceTime and the current time and finds it's difference. If the difference exceeds the 
+        pressDelay set to 3000ms, the counter will reset to 0, turning all the LEDs off.
+    </p>
+    <p><img src="./images/switch3.png"></p>
+    <p>
+        During this time, the function 'decode' has been continuously running and any change in the counter
+        will cause a switch in states of the LEDs. The lastButtonState is also being continuously updated.
+    </p>
+    <p><img src="./images/switch4.png"></p>
+    <p>
+        The final part of the programme is the function decode, which contains the states the LEDs are meant
+        to switch on or off.
+    </p>
+    <p><img src="./images/switch5.png"></p>
+    <h3><u>Resources Used</u></h3>
+    <a href="https://www.arduino.cc/en/Tutorial/BuiltInExamples/Debounce" 
+    target="_blank" id="link">[Debouncing in Arduino] </a>
+    <br>
+    <a href="https://www.arduino.cc/reference/en/language/functions/time/millis/" 
+    target="_blank" id="link">[millis() in Arduino]</a>
+    <br>
+    <a href="https://www.electronicshub.org/seven-segment-displays/" 
+    target="_blank" id="link">[Decoder Truth Table]</a>
+    <br>
 </body>
 </html>
