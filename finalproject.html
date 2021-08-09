@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Web Page</title>
+      	<link rel="stylesheet" href="index.css">
+        <h1 id="head">My Project Web Page</h1>
+  </head>
+  <body>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About me</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Projects</a>
+        <div class="dropdown-content">
+          <a href="website.html">Website Development</a>
+          <a href="3dmodeling.html">3D Modeling</a>
+          <a href="lasercutting.html">Laser Cutting</a>
+          <a href="3dprinting.html">3D Printing</a>
+          <a href="arduino.html">Arduino</a>
+        </div>
+      </li>
+      <li><a href="finalproject.html">Final Project</a></li>
+    </ul>
+    <div class="content">
+      <h1><u>Final Project</u></h1>
+      <h2><u>Step 1: Planning</u></h2>
+      <p>
+          Like every and all great projects, it always starts with planning, and hence that was what i did
+          in the first week - Sketching and Drawing. I wanted to make a clock with a 7219 matrix display,
+          that was able to keep the time even when the power was unplugged. Hence, i sketched out a basic 
+          design.
+      </p>
+      <p>
+        <img src="./images/planning sketch.jfif"width="99%">
+      </p>
+      <h2><u>Step 2: 3D Modeling</u></h2>
+      <p>
+        The first version of the casing was simple as i only drew out the basic outlines and measurements 
+        for it. The design was similar to my music box, hence i copied the method. I also included a hole 
+        for my matrix display.
+      </p>
+      <h3><u>Version 1</U></h3>
+      <p>
+        <iframe src="https://ichat1891.autodesk360.com/shares/public/SH56a43QTfd62c1cd968d18da869083f45ba?
+        mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" 
+        mozallowfullscreen="true"  frameborder="0"></iframe>
+      </p>
+      <p><a href="3dmodeling.html#musicbox">[Click here to see the Music Box]</a><br></p>
+      <p>
+        Now, with the general shape of the casing done, i had to design various mounts to hold up 5
+        different components.
+      </p>
+      <h3><u>Support for Matrix</U></h3>
+      <p>
+        The first item was the 7219 Matrix Display.
+      </p>
+      <p>
+        <iframe src="https://ichat1891.autodesk360.com/shares/public/SH56a43QTfd62c1cd968d87bfb8f07873372?
+        mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" 
+        mozallowfullscreen="true"  frameborder="0"></iframe>
+      </p>
+      <p>
+        I noticed that there were holes behind the matrix display, hence i designed it to ensure that M3 
+        screws were able to fit in, mounting the matrix to the case later on.
+      </p>
+      <h3><u>Support for Arduino and RTC</U></h3>
+      <p>The second item was the arduino nano and the DS3231 RTC Module.</p>
+      <p>
+        <iframe src="https://ichat1891.autodesk360.com/shares/public/SH56a43QTfd62c1cd9686a5bbeeb7fee2906?
+        mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" 
+        mozallowfullscreen="true"  frameborder="0"></iframe>
+      </p>
+      <p>
+        The RTC Module would be screwed onto the support using M3 screws, while the arduino nano would be 
+        snapped in place onto the support for ease of access for wiring later on.
+        <br>
+        The entire would then be mounted onto the case using screws.
+      </p>
+      <h3><u>Support for Push Buttons</U></h3>
+      <p>
+        Finally, third item was the 2 push buttons. Additionally, i also had to design the top parts of the push
+        buttons.
+      </p>
+      <p>
+        <iframe src="https://ichat1891.autodesk360.com/shares/public/SH56a43QTfd62c1cd96807b0c9d109bc6558?
+        mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" 
+        mozallowfullscreen="true"  frameborder="0"></iframe>
+      </p>
+      <p>
+        The buttons would be glued onto the support, while the top part were glued onto the buttons itself.
+        <br>
+        Holes were also included to mount the support onto the casing.
+      </p>
+      <h3><u>Final Design</U></h3>
+      <p>
+        I then fitted every component into the casing, to check if everything fits before sending to 
+        components to 3D Print.
+      </p>
+      <P>
+        <iframe src="https://ichat1891.autodesk360.com/shares/public/SH56a43QTfd62c1cd96897e44c46d8213439?
+        mode=embed" width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" 
+        mozallowfullscreen="true"  frameborder="0"></iframe>
+      </P>
+      <p>
+        I also edited in holes onto the casing to mount the various supports.
+      </p>
+      <h2><u>Step 3: 3D Printing and Laser Cutting</u></h2>
+      <h3>Machine Settings:</h3>
+      <p>
+        <table>
+          <tr>
+            <td>Machine</td>
+            <td>Ultimaker 2+</td>
+          </tr>
+          <tr>
+            <td>Material</td>
+            <td>Black PLA</td>
+          </tr>
+          <tr>
+            <td>Layer Height</td>
+            <td>0.2mm</td>
+          </tr>
+          <tr>
+            <td>Infill Density and Pattern</td>
+            <td>20%, Grid</td>
+          </tr>
+          <tr>
+            <td>Printing speed</td>
+            <td>80mm/s</td>
+          </tr>
+          <tr>
+              <td>Supports and Placements</td>
+              <td>Normal, Touching Build Plate</td>
+          </tr>
+          <tr>
+              <td>Build Plate Adhesion</td>
+              <td>Brim</td>
+          </tr>
+        </table>
+      </p>
+      <p>
+        To begin printing, i first exported all of my 3D Models from Fusion360 into Cura and used the above 
+        settings to prepare it for 3D printing.
+      </p>
+      <p>
+        <img src="./images/slice matrix.png"width="33%">
+        <img src="./images/buttonslice.png"width="33%">
+        <img src="./images/slice matrix.png"width="33%">
+      </p>
+      <p>
+        The stl files were then transfered onto an SD card, before being inserted into the 3D Printer ready to 
+        be printed.
+      </p>
+      <h3><u>Matrix Support</u></h3>
+      <p>
+        <img src="./images/f443d229-19dd-4b9e-aeed-9b7f79b99c32.jfif"width="33%">
+        <img src="./images/matrix2.jfif"width="33%">
+        <img src="./images/matrix3.jfif"width="33%">
+      </p>
+      <h3><u>Arduino and RTC Support</u></h3>
+      <h3><u>Button Support</u></h3>
+      <p>
+        <table>
+          <tr>
+            <td>Machine</td>
+            <td>Epilog Fusion Pro</td>
+          </tr>
+          <tr>
+            <td>Material Thickness and Type</td>
+            <td>3mm Clear Acrylic</td>
+          </tr>
+          <tr>
+            <td>Cut Settings</td>
+            <td>
+              Speed - 18<br>
+              Power - 90<br>
+              Frequency - 90
+            </td>
+        </table>
+      </p>
+      <p><img src="./images/finaldxf.png"width="49%"></p>
+      <h2><u>Step 4: Electronics</u></h2>
+      <p>
+        After completing the hardware side of my project, i moved onto the software. I first planned out the 
+        connections by drawing them out on InkScape.
+      </p>
+      <h3><u>Wiring Diagram</u></h3>
+      <p><img src="./images/arduino-1.png"width="99%"></p>
+      <h2><u>Step 5: Coding and Testing</u></h2>
+      <p>
+        Next, I made a code for the clock, with reference to a video showcasing a digital clock online.
+      </p>
+      <p>
+        [<a href="https://www.youtube.com/watch?v=1rt031sYztw" target="_blank">Click Here to see where i 
+          got the code</a>]
+      </p>
+      <h3>Issues Faced: </h3>
+      <p>
+        Initially, during testing I wanted to also include the use of neopixels into my project, so as to 
+        produce different colours. However upon connecting and testing, I realised that there was not enough
+        power being supplied into the 7219 matrix display, hence causing the matrix display to hang. This was
+        due to the fact that the matrix display draws in too much power for the arduino board to supply for 
+        both the matrix display and the neopixels.
+        <br>
+        <br>
+        The second issue I faced, was when I changed the push button switches to touch sensors, however upon
+        doing so, I faced a similar issue where not enough power was being supplied.
+        <br>
+        <br>
+        Lastly, The on/off switch which i wanted to add in was also no possible, as cutting the connection 
+        between the vcc and the matrix display would actually make it unable to work.
+        <br>
+        <br>
+        Hence, I have decided to forgo all 3 ideas.
+      </p>
+      <p>
+        However, after all that the tweaking the code does work, and the clock is able to function.
+      </p>
+      <h3><u>Final Testing: </u></h3>
+      <p><img src="./images/codetest.jfif"width="50%"></p>
+    </div>
+  </body>
+</html>
