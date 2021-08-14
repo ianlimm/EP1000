@@ -31,8 +31,86 @@
           that was able to keep the time even when the power was unplugged. Hence, i sketched out a basic 
           design.
       </p>
+      <h3><u>First Sketch:</u></h3>
       <p>
         <img src="./images/planning sketch.jfif"width="99%">
+      </p>
+      <h3><u>Material List:</u></h3>
+      <p>
+        <table>
+          <tr>
+            <th>Item Description</th>
+            <th>Quantity</th>
+            <th>Approx cost</th>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/yal-MAX7219-4-in-1-LED-Display-Dot-Matrix-Microcontroller-MCU-
+              Control-Module-5P-Line-i.40384408.6412007456?gclid=CjwKCAjwsNiIBhBdEiwAJK4khkkd6lyDMfNIkV7
+              0rVjLB3aeao19jiQDD7N6wviC4LG2vaRSLWA2cRoCBNEQAvD_BwE" target="_blank">Max7219 4 in 1 Matrix
+              display</a>]
+            </td>
+            <td>1</td>
+            <td>$5.67</td>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/Ds3231-AT24C32-High-Precision-Clock-Module-IIC-Module-Storage-
+              Module-i.186656254.6403629743?__hybrid_pc__=1&stm_referrer=" target="_blank">DS3231 Real Time 
+              clock Module</a>]
+            </td>
+            <td>1</td>
+            <td>$4.40</td>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/Nano-V3-0-ATmega328P-controller-compatible-for-arduino-nano-CH340-
+              USB-driver-with-CABLE-NANO-328P-NANO-3-0-i.161750523.4220308532?gclid=CjwKCAjwsNiIBhBdEiwAJK4k
+              hseixYEnb2A__7Epv_muXcNpvW87tgY__LkbLDCJxBkRuR5PAKA0ghoCpTAQAvD_BwE" target="_blank">Arduino 
+              Nano</a>]
+            </td>
+            <td>1</td>
+            <td>$8.13</td>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/5pcs-SYB-170-Mini-Solderless-Prototype-Breadboard-170-Tie-points-for
+              -Arduino-UNO-i.56539845.1428272970?gclid=CjwKCAjwsNiIBhBdEiwAJK4khn6vibWSyBVgOMHuTXRMHF13U7leWMJ
+              lMSCYCi3DU4zK2EY4_CAO7BoCWXEQAvD_BwE" target="_blank">Mini Breadboard</a>]
+            </td>
+            <td>1</td>
+            <td>$1.90</td>
+          </tr>
+          <tr>
+            <td>5V DC Power Jack</td>
+            <td>1</td>
+            <td>$0.30</td>
+          </tr>
+          <tr>
+            <td>A3 Acrylic Sheet 3mm (green/clear)</td>
+            <td>2</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/-SGSeller-40-Pieces-20-10-5-3-Pieces-Free-Postage-CR2032-3V-
+              Lithium-Coin-Button-Battery-i.2564800.3815194441?__hybrid_pc__=1&stm_referrer=" 
+              target="_blank">Litium Coin Battery</a>]
+            </td>
+            <td>1</td>
+            <td>$2.40</td>
+          </tr>
+          <tr>
+            <td>
+              [<a href="https://shopee.sg/WBMY-100Pcs-6x6x4-5mm-Panel-PCB-Momentary-Tactile-Tact-Push-Button-
+              Switch-i.293608952.6747082536?gclid=CjwKCAjwsNiIBhBdEiwAJK4khsX6Xx-6ELRTC-11IC5Lf6QixrJNNt9zTYy
+              ukq5-2ke6RdWVEM9VaRoCU3UQAvD_BwE" 
+              target="_blank">Push Button Switches</a>]
+            </td>
+            <td>2</td>
+            <td>$1.85(100 pieces)</td>
+          </tr>
+        </table>
       </p>
       <h2><u>Step 2: 3D Modeling</u></h2>
       <p>
@@ -73,9 +151,7 @@
       </p>
       <p>
         The RTC Module would be screwed onto the support using M3 screws, while the arduino nano would be 
-        snapped in place onto the support for ease of access for wiring later on.
-        <br>
-        The entire would then be mounted onto the case using screws.
+        put onto a mini breadboard.
       </p>
       <h3><u>Support for Push Buttons</U></h3>
       <p>
@@ -212,6 +288,12 @@
         goes into set mode, where the user has to set the hours and minutes. Additionally, the brightness of 
         the matrix can also be adjusted after the hours and minutes are set.
       </p>
+      <p>
+        <img src="./images/test1.jfif"width="49%">
+        <img src="./images/test2.jfif"width="49%">
+        <img src="./images/test3.jfif"width="49%">
+        <img src="./images/test4.jfif"width="49%">
+      </p>
       <h3>Issues Faced: </h3>
       <p>
         Initially, during testing I wanted to also include the use of neopixels into my project, so as to 
@@ -234,8 +316,8 @@
       <p>
         However, after all that the tweaking the code does work, and the clock is able to function.
       </p>
-      <h3><u>Final Testing: </u></h3>
-      <p><img src="./images/codetest.jfif"width="50%"></p>
+      <h3><u>Final Result: </u></h3>
+      <p><img src="./images/test5.jfif"width="50%"></p>
       <h2><u>Step 6: Wiring and Assembly</u></h2>
     </div>
   </body>
